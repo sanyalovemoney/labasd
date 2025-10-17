@@ -1,26 +1,45 @@
 #include <stdio.h>
 
-int main()
-{
-    float x, y;
-    printf("input x: ");
-    scanf("%f", &x);
+int main() {
+    int x, y;
 
-    // x ? (2,12] ? (22,32)
-    if ((x > 2 && x <= 12) || (x > 22 && x < 32))
-    {
-        y = -9 * x * 3 + 5 * x * 2;
-        printf("your y(%.2f) = %.2f\n", x, y);
+    printf("Введіть число x: ");
+    scanf("%d", &x);
+
+    // 1. Якщо x <= 0
+    if (!(x > 0)) {  // заміна "x <= 0" через заперечення
+        y = -x * x - 12;
+        printf("y = -x^2 - 12 = %d\n", y);
     }
-    // x ? (-?, 0]
-    else if (x <= 0)
-    {
-        y = -x * 2 - 12;
-        printf("your y(%.2f) = %.2f\n", x, y);
-    }
-    else
-    {
-        printf("no solution for x \n");
+    else {
+        // 2. Якщо 0 < x <= 2 → немає відповіді
+        if (x <= 2) {
+            printf("немає відповіді\n");
+        }
+        else {
+            // 3. Якщо 2 < x <= 12
+            if (x > 2) {
+                if (x <= 12) {
+                    y = -9 * x * 3 + 5 * x * 2;
+                    printf("y = -9x*3 + 5x*2 = %d\n", y);
+                }
+                else {
+                    // 4. Якщо 22 < x < 32
+                    if (x > 22) {
+                        if (x < 32) {
+                            y = -9 * x * 3 + 5 * x * 2;
+                            printf("y = -9x*3 + 5x*2 = %d\n", y);
+                        }
+                        else {
+                            printf("немає відповіді\n");
+                        }
+                    }
+                    else {
+                        printf("немає відповіді\n");
+                    }
+                }
+            }
+        }
     }
 
     return 0;
