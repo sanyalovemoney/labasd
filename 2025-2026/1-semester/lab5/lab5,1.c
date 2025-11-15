@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define N 7   // Розмір квадратної матриці(може бути змінений)  
+#define N 7 // Розмір квадратної матриці(може бути змінений)
 
 int matrix[N][N];
 
@@ -11,7 +11,7 @@ int RandomRange(const int min, const int max) {
     return rand() % (max - min + 1) + min;
 }
 
-/// Заповнення матриці випадковими значеннями
+// Заповнення матриці випадковими значеннями
 void FillRandomMatrix() {
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
@@ -31,6 +31,7 @@ void PrintMatrix() {
     }
     printf("\n");
 }
+
 // Сортування головної діагоналі методом Шелла
 void ShellSortMainDiagonal() {
     int temp;
