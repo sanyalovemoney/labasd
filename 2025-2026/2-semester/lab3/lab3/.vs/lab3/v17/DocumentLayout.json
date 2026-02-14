@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\casha\\source\\repos\\sanyalovemoney\\labasd\\2025-2026\\2-semester\\lab3\\lab3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F83191E3-6B3E-43CA-A575-92118542DAE1}|lab3\\lab3.csproj|c:\\users\\casha\\source\\repos\\sanyalovemoney\\labasd\\2025-2026\\2-semester\\lab3\\lab3\\lab3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F83191E3-6B3E-43CA-A575-92118542DAE1}|lab3\\lab3.csproj|solutionrelative:lab3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\casha\\source\\repos\\sanyalovemoney\\labasd\\2025-2026\\2-semester\\lab3\\lab3\\lab3\\Program.cs",
+              "RelativeDocumentMoniker": "lab3\\Program.cs",
+              "ToolTip": "C:\\Users\\casha\\source\\repos\\sanyalovemoney\\labasd\\2025-2026\\2-semester\\lab3\\lab3\\lab3\\Program.cs",
+              "RelativeToolTip": "lab3\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAL4BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T12:18:29.543Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

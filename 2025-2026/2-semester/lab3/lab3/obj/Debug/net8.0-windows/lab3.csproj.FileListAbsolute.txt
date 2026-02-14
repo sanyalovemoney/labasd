@@ -1,0 +1,15 @@
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab3\lab3\lab3\obj\Debug\net8.0-windows\lab3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab3\lab3\lab3\obj\Debug\net8.0-windows\lab3.AssemblyInfoInputs.cache
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab3\lab3\lab3\obj\Debug\net8.0-windows\lab3.AssemblyInfo.cs
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab3\lab3\lab3\obj\Debug\net8.0-windows\lab3.csproj.CoreCompileInputs.cache
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab3\lab3\lab3\obj\Debug\net8.0-windows\lab3.sourcelink.json
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab3\lab3\lab3\bin\Debug\net8.0-windows\lab3.exe
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab3\lab3\lab3\bin\Debug\net8.0-windows\lab3.deps.json
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab3\lab3\lab3\bin\Debug\net8.0-windows\lab3.runtimeconfig.json
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab3\lab3\lab3\bin\Debug\net8.0-windows\lab3.dll
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab3\lab3\lab3\bin\Debug\net8.0-windows\lab3.pdb
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab3\lab3\lab3\obj\Debug\net8.0-windows\lab3.dll
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab3\lab3\lab3\obj\Debug\net8.0-windows\refint\lab3.dll
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab3\lab3\lab3\obj\Debug\net8.0-windows\lab3.pdb
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab3\lab3\lab3\obj\Debug\net8.0-windows\lab3.genruntimeconfig.cache
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab3\lab3\lab3\obj\Debug\net8.0-windows\ref\lab3.dll

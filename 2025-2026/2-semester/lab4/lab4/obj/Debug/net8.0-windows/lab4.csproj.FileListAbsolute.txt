@@ -1,0 +1,15 @@
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab4\lab4\obj\Debug\net8.0-windows\lab4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab4\lab4\obj\Debug\net8.0-windows\lab4.AssemblyInfoInputs.cache
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab4\lab4\obj\Debug\net8.0-windows\lab4.AssemblyInfo.cs
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab4\lab4\obj\Debug\net8.0-windows\lab4.csproj.CoreCompileInputs.cache
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab4\lab4\obj\Debug\net8.0-windows\lab4.sourcelink.json
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab4\lab4\bin\Debug\net8.0-windows\lab4.exe
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab4\lab4\bin\Debug\net8.0-windows\lab4.deps.json
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab4\lab4\bin\Debug\net8.0-windows\lab4.runtimeconfig.json
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab4\lab4\bin\Debug\net8.0-windows\lab4.dll
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab4\lab4\bin\Debug\net8.0-windows\lab4.pdb
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab4\lab4\obj\Debug\net8.0-windows\lab4.dll
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab4\lab4\obj\Debug\net8.0-windows\refint\lab4.dll
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab4\lab4\obj\Debug\net8.0-windows\lab4.pdb
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab4\lab4\obj\Debug\net8.0-windows\lab4.genruntimeconfig.cache
+C:\Users\casha\source\repos\sanyalovemoney\labasd\2025-2026\2-semester\lab4\lab4\obj\Debug\net8.0-windows\ref\lab4.dll
