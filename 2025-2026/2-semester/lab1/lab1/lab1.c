@@ -1,145 +1,88 @@
-﻿#define _CRT_SECURE_NO_WARNINGS 
-#include <iostream>
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <math.h>
 
-double sum_on_descent(int current, int n, double x, double f_current) {
-    if (current > n) {
-        return 0.0;
+double rec_descent(double x, int i, int n, double current_term, double current_sum) {
+    if (i == n) {
+        return current_sum;
     }
-
-    double sum_rest = sum_on_descent(current + 1, n, x,
-        f_current * current * (x - 1.0) / (current * x + x));
-    return f_current + sum_rest;
+    double next_term = current_term * i * (x - 1.0) / (x * (i + 1.0));
+    return rec_descent(x, i + 1, n, next_term, current_sum + next_term);
 }
 
-double calculate_sum_method1(int n, double x) {
-    if (n < 1 || x <= 0.5) {
-        return 0.0;
-    }
-
-    double f1 = (x - 1.0) / x;
-    return sum_on_descent(1, n, x, f1);
+double sum_descent(double x, int n) {
+    double start_term = (x - 1.0) / x;
+    return rec_descent(x, 1, n, start_term, start_term);
 }
 
 typedef struct {
+    double term;
     double sum;
-    double f_next;
-} Result;
+} RecResult;
 
-Result sum_on_return(int current, int n, double x, double f_current) {
-    Result res;
-
-    if (current > n) {
-        res.sum = 0.0;
-        res.f_next = f_current;
+RecResult rec_return(double x, int i) {
+    if (i == 1) {
+        double start_term = (x - 1.0) / x;
+        RecResult res = { start_term, start_term };
         return res;
     }
 
-    double f_next = f_current * current * (x - 1.0) / (current * x + x);
-    Result rest = sum_on_return(current + 1, n, x, f_next);
+    RecResult prev = rec_return(x, i - 1);
+    int prev_i = i - 1;
 
-    res.sum = f_current + rest.sum;
-    res.f_next = rest.f_next;
+    double current_term = prev.term * prev_i * (x - 1.0) / (x * (prev_i + 1.0));
+    double current_sum = prev.sum + current_term;
 
-    return res;
+    RecResult current = { current_term, current_sum };
+    return current;
 }
 
-double calculate_sum_method2(int n, double x) {
-    if (n < 1 || x <= 0.5) {
-        return 0.0;
-    }
-
-    double f1 = (x - 1.0) / x;
-    Result result = sum_on_return(1, n, x, f1);
-
-    return result.sum;
+double sum_return(double x, int n) {
+    return rec_return(x, n).sum;
 }
 
-double sum_mixed(int current, int n, double x, double f_current) {
-    if (current > n) {
-        return 0.0;
+double rec_mixed(double x, int i, int n, double current_term) {
+    if (i == n) {
+        return current_term;
     }
-
-    double f_next = f_current * current * (x - 1.0) / (current * x + x);
-    double sum_rest = sum_mixed(current + 1, n, x, f_next);
-    return f_current + sum_rest;
+    double next_term = current_term * i * (x - 1.0) / (x * (i + 1.0));
+    return current_term + rec_mixed(x, i + 1, n, next_term);
 }
 
-double calculate_sum_method3(int n, double x) {
-    if (n < 1 || x <= 0.5) {
-        return 0.0;
-    }
+double sum_mixed(double x, int n) {
+    double start_term = (x - 1.0) / x;
+    return rec_mixed(x, 1, n, start_term);
+}
 
-    double f1 = (x - 1.0) / x;
-    return sum_mixed(1, n, x, f1);
+double sum_cyclic(double x, int n) {
+    double term = (x - 1.0) / x;
+    double sum = term;
+
+    for (int i = 1; i < n; i++) {
+        term = term * i * (x - 1.0) / (x * (i + 1.0));
+        sum += term;
+    }
+    return sum;
 }
 
 int main() {
-    int n, method;
-    double x;
+    int n_test = 5;
+    double x_test = 2.0;
 
-    printf("Enter n (positive integer): ");
-    if (scanf("%d", &n) != 1 || n < 1) {
-        printf("Error: n must be a positive integer!\n");
-        return 1;
-    }
+    printf("=== ALGORITHM TESTING (n = %d, x = %.2f) ===\n", n_test, x_test);
 
-    printf("Enter x (x > 0.5): ");
-    if (scanf("%lf", &x) != 1 || x <= 0.5) {
-        printf("Error: x must be greater than 0.5!\n");
-        return 1;
-    }
+    double res_desc = sum_descent(x_test, n_test);
+    double res_ret = sum_return(x_test, n_test);
+    double res_mix = sum_mixed(x_test, n_test);
+    double res_cyc = sum_cyclic(x_test, n_test);
+    double res_exact = log(x_test);
 
-    printf("Choose method (1-Descent, 2-Return, 3-Mixed, 4-Compare all): ");
-    if (scanf("%d", &method) != 1 || method < 1 || method > 4) {
-        printf("Error: invalid method!\n");
-        return 1;
-    }
+    printf("1. Recursion (descent):       %.10f\n", res_desc);
+    printf("2. Recursion (return):        %.10f\n", res_ret);
+    printf("3. Recursion (mixed):         %.10f\n", res_mix);
+    printf("4. Cyclic algorithm:          %.10f\n", res_cyc);
+    printf("5. Reference math.h (ln x):   %.10f\n", res_exact);
 
-    printf("\n");
-
-    if (method == 4) {
-        double result1 = calculate_sum_method1(n, x);
-        double result2 = calculate_sum_method2(n, x);
-        double result3 = calculate_sum_method3(n, x);
-        double ln_x = log(x);
-
-        printf("Method 1: %.10lf  (error: %.2e)\n", result1, result1 - ln_x);
-        printf("Method 2: %.10lf  (error: %.2e)\n", result2, result2 - ln_x);
-        printf("Method 3: %.10lf  (error: %.2e)\n", result3, result3 - ln_x);
-        printf("ln(%.2lf): %.10lf\n", x, ln_x);
-
-        if (result1 == result2 && result2 == result3) {
-            printf("\n✓ All methods give identical results\n");
-        }
-    }
-    else {
-        double result;
-        const char* method_name;
-
-        switch (method) {
-        case 1:
-            result = calculate_sum_method1(n, x);
-            method_name = "Method 1 (Descent)";
-            break;
-        case 2:
-            result = calculate_sum_method2(n, x);
-            method_name = "Method 2 (Return)";
-            break;
-        case 3:
-            result = calculate_sum_method3(n, x);
-            method_name = "Method 3 (Mixed)";
-            break;
-        default:
-            return 1;
-        }
-
-        printf("%s\n", method_name);
-        printf("Sum of first %d terms: %.10lf\n", n, result);
-        printf("ln(%.2lf) = %.10lf\n", x, log(x));
-        printf("Error: %.2e\n", result - log(x));
-    }
+    printf("\nError: |%.10f - %.10f| = %.10f\n", res_cyc, res_exact, fabs(res_cyc - res_exact));
 
     return 0;
 }
